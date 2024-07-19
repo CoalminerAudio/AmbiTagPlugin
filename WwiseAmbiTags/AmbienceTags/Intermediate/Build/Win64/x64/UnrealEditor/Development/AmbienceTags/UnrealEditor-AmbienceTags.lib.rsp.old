@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AmbienceTags.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\UnrealProjects\AudioTestLevel\AudioTestProject\Intermediate\Build\Win64\x64\AudioTestLevelEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"F:\UnrealProjects\AudioTestLevel\AudioTestProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp.obj"
+"F:\UnrealProjects\AudioTestLevel\AudioTestProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Default.rc2.res"
+/OUT:"F:\UnrealProjects\AudioTestLevel\AudioTestProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\UnrealEditor-AmbienceTags.lib"

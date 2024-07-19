@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AmbienceTags.cpp.obj": [
+			"AC_AmbiTagTrigger.gen.cpp.obj",
+			"AmbienceTags.init.gen.cpp.obj",
+			"AmbienceTagsData.gen.cpp.obj",
+			"AmbiTagCollection.gen.cpp.obj",
+			"AmbiTagEvent.gen.cpp.obj",
+			"AC_AmbiTagTrigger.cpp.obj",
+			"AmbienceTags.cpp.obj",
+			"AmbienceTagsData.cpp.obj",
+			"AmbiTagCollection.cpp.obj",
+			"AmbiTagEvent.cpp.obj"
+		]
+	}
+}

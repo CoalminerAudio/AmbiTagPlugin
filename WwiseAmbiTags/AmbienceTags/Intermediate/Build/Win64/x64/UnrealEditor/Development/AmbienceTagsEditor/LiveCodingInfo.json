@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AmbienceTagsEditor.cpp.obj": [
+			"AmbienceTagsEditor.init.gen.cpp.obj",
+			"AmbiTagCollectionFactory.gen.cpp.obj",
+			"AmbiTagEventFactory.gen.cpp.obj",
+			"Actions_AmbiTagCollection.cpp.obj",
+			"Actions_AmbiTagEvent.cpp.obj",
+			"AmbienceTagsEditor.cpp.obj",
+			"AmbiTagCollectionFactory.cpp.obj",
+			"AmbiTagEventFactory.cpp.obj"
+		]
+	}
+}
