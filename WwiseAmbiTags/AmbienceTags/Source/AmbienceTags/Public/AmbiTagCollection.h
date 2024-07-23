@@ -27,17 +27,10 @@ public:
 	//AmbiTag events to spawn
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<UAmbiTagEvent*> AssociatedAmbiTags;
-	
-	//parent actor
-	UPROPERTY()
-	AActor* ParentActor;
 
 	//spawn comp
-	UPROPERTY()
-	USceneComponent* SpawnSource;
-
 	UPROPERTY(BlueprintReadWrite)
-	bool bDebugEvents = false;
+	USceneComponent* SpawnSource;
 
 	//tell associated tags to start or stop playback
 	UFUNCTION(BlueprintCallable)

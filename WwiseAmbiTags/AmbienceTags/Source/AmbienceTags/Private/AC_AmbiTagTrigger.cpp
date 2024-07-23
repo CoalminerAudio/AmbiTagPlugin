@@ -49,10 +49,7 @@ void UAC_AmbiTagTrigger::BeginPlay()
 			//set spawn variables for each collection
 			for (auto& AmbiTagCollection : AmbiTagCollectionList)
 			{
-			
-				AmbiTagCollection->bDebugEvents = bDebug;
 				AmbiTagCollection->SpawnSource = SpawnComponent;
-				AmbiTagCollection->ParentActor = this->GetOwner();
 				InactiveAmbiTagCollections.Add(AmbiTagCollection);
 			}
 
@@ -67,6 +64,7 @@ void UAC_AmbiTagTrigger::BeginPlay()
 		
 	}
 
+	//if the component is disabled, or if the list is empty, delete this component
 	else
 	{
 		this->DestroyComponent();
@@ -90,89 +88,111 @@ void UAC_AmbiTagTrigger::AddComponentToTracker()
 //triggers a check for ambitags
 void UAC_AmbiTagTrigger::AmbiTagsUpdateDelegate()
 {
+	//check the active ambi tag collection
 	if (ActiveAmbiTagCollections.Num() > 0)
 	{
-		CheckActiveTags();
+		CheckTags(true, ActiveAmbiTagCollections);
 	}
 
+	//check the inactive ambitag collection
 	if (InactiveAmbiTagCollections.Num() > 0)
 	{
-		CheckInactiveTags();
+		CheckTags(false, InactiveAmbiTagCollections);
 	}
 
-	DebugEvent();
-}
-
-void UAC_AmbiTagTrigger::CheckActiveTags()
-{
-	for (auto& AmbiTagCollection : ActiveAmbiTagCollections)
+	//check to see if there are active events attached to this component
+	if (ActiveAmbiTagCollections.IsEmpty())
 	{
-		//for each active tag, check if it still matches the subsystem. if it doesn't trigger end
-		if (!AmbiTagCollection->CollectionTriggerCondition.Matches(ambiTagSubsystem->ActiveAmbiTags))
-		{
-			//deactivate
-			AmbiTagCollection->TriggerAmbiTags(false);
-
-			//add to inactive array
-			InactiveAmbiTagCollections.Add(AmbiTagCollection);
-
-			//remove from this array
-			ActiveAmbiTagCollections.Remove(AmbiTagCollection);
-
-			//Remove item from debug list
-			AmbiTagDebugList.DebugNames.Remove(AmbiTagCollection->GetFName());
-
-			//trigger debug function
-			SendDebugInfo(true);
-		}
-
-		if (ActiveAmbiTagCollections.IsEmpty() && bHasActiveEvents)
-		{
-			bHasActiveEvents = false;
-			CallActivated();
-		}
+		bHasActiveEvents = false;
+	}
+	else
+	{
+		bHasActiveEvents = true;
 	}
 
+	CallActivated();
+
+	//if debug is set, run the debug values
+	if (ambiTagSubsystem->bDebugEmitters)
+	{
+		DebugEvent();
+	}
 }
 
-void UAC_AmbiTagTrigger::CheckInactiveTags()
+
+void UAC_AmbiTagTrigger::CheckTags(bool ActiveTags, TArray<UAmbiTagCollection*> CollectionList)
 {
-	for (auto& AmbiTagCollection : InactiveAmbiTagCollections)
+	//iterate through the array backwards
+	for (int i = CollectionList.Num() - 1; i >= 0; i--)
 	{
-		//for each collection, does the trigger condition match the subsystem?
-		if (AmbiTagCollection->CollectionTriggerCondition.Matches(ambiTagSubsystem->ActiveAmbiTags))
+		//get the collection from that index
+		UAmbiTagCollection* AmbiTagCollection = CollectionList[i];
+
+		//if we are using the active tags list
+		if (ActiveTags)
 		{
-			if (!bHasActiveEvents)
+			//for each active tag, check if it still matches the subsystem. if it doesn't trigger end
+			if (!AmbiTagCollection->CollectionTriggerCondition.Matches(ambiTagSubsystem->ActiveAmbiTags))
 			{
-				bHasActiveEvents = true;
-				CallActivated();
-			}
-			//activate
-			AmbiTagCollection->TriggerAmbiTags(true);
-			
-			//add to active array
-			ActiveAmbiTagCollections.Add(AmbiTagCollection);
-			
-			//add to debug list
-			AmbiTagDebugList.DebugNames.Add(AmbiTagCollection->GetFName());
+				//deactivate the ambitags in the collection
+				AmbiTagCollection->TriggerAmbiTags(false);
 
-			//trigger debug function
-			SendDebugInfo(false);
+				//add to inactive array
+				InactiveAmbiTagCollections.Add(AmbiTagCollection);
+
+				//Remove item from debug list
+				AmbiTagDebugList.DebugNames.Remove(AmbiTagCollection->GetFName());
+
+				//trigger debug function
+				SendDebugInfo(true);
+
+				//remove this item from this array
+				ActiveAmbiTagCollections.Remove(AmbiTagCollection);
+
+			}
+		}
+
+		//if we are using the inactive tags list
+		else
+		{
+			//for each collection, does the trigger condition match the subsystem?
+			if (AmbiTagCollection->CollectionTriggerCondition.Matches(ambiTagSubsystem->ActiveAmbiTags))
+			{
+				//activate
+				AmbiTagCollection->TriggerAmbiTags(true);
+
+				//add to active array
+				ActiveAmbiTagCollections.Add(AmbiTagCollection);
+
+				//add to debug list
+				AmbiTagDebugList.DebugNames.Add(AmbiTagCollection->GetFName());
+
+				//trigger debug function
+				SendDebugInfo(false);
+
+				//remove item from array
+				InactiveAmbiTagCollections.Remove(AmbiTagCollection);
+			}
 		}
 	}
+
+
 }
 
+//displays debug info in the world
 void UAC_AmbiTagTrigger::SendDebugInfo(bool Remove)
 {
 	//send debug info to the subsystem
 	ambiTagSubsystem->UpdateDebugList(Remove, DebugName, AmbiTagDebugList);
 }
 
+//broadcast for this component having active events
 void UAC_AmbiTagTrigger::CallActivated()
 {
 	ActivationChanged.Broadcast(bHasActiveEvents);
 }
 
+//displays world debug info for this component
 void UAC_AmbiTagTrigger::DebugEvent()
 {
 	FVector SpawnPoint = SpawnComponent->GetComponentLocation() + FVector{0, 0, 25};

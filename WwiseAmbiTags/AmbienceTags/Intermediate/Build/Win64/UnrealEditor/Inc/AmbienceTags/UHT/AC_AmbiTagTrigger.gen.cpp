@@ -156,63 +156,60 @@ DEFINE_FUNCTION(UAC_AmbiTagTrigger::execCallActivated)
 }
 // End Class UAC_AmbiTagTrigger Function CallActivated
 
-// Begin Class UAC_AmbiTagTrigger Function CheckActiveTags
-struct Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags_Statics
+// Begin Class UAC_AmbiTagTrigger Function CheckTags
+struct Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics
 {
+	struct AC_AmbiTagTrigger_eventCheckTags_Parms
+	{
+		bool ActiveTags;
+		TArray<UAmbiTagCollection*> CollectionList;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/AC_AmbiTagTrigger.h" },
 	};
 #endif // WITH_METADATA
+	static void NewProp_ActiveTags_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ActiveTags;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CollectionList_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_CollectionList;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAC_AmbiTagTrigger, nullptr, "CheckActiveTags", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags()
+void Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_ActiveTags_SetBit(void* Obj)
+{
+	((AC_AmbiTagTrigger_eventCheckTags_Parms*)Obj)->ActiveTags = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_ActiveTags = { "ActiveTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AC_AmbiTagTrigger_eventCheckTags_Parms), &Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_ActiveTags_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_CollectionList_Inner = { "CollectionList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAmbiTagCollection_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_CollectionList = { "CollectionList", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AC_AmbiTagTrigger_eventCheckTags_Parms, CollectionList), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_ActiveTags,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_CollectionList_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::NewProp_CollectionList,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAC_AmbiTagTrigger, nullptr, "CheckTags", nullptr, nullptr, Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::PropPointers), sizeof(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::AC_AmbiTagTrigger_eventCheckTags_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::AC_AmbiTagTrigger_eventCheckTags_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UAC_AmbiTagTrigger::execCheckActiveTags)
+DEFINE_FUNCTION(UAC_AmbiTagTrigger::execCheckTags)
 {
+	P_GET_UBOOL(Z_Param_ActiveTags);
+	P_GET_TARRAY(UAmbiTagCollection*,Z_Param_CollectionList);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->CheckActiveTags();
+	P_THIS->CheckTags(Z_Param_ActiveTags,Z_Param_CollectionList);
 	P_NATIVE_END;
 }
-// End Class UAC_AmbiTagTrigger Function CheckActiveTags
-
-// Begin Class UAC_AmbiTagTrigger Function CheckInactiveTags
-struct Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/AC_AmbiTagTrigger.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAC_AmbiTagTrigger, nullptr, "CheckInactiveTags", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UAC_AmbiTagTrigger::execCheckInactiveTags)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->CheckInactiveTags();
-	P_NATIVE_END;
-}
-// End Class UAC_AmbiTagTrigger Function CheckInactiveTags
+// End Class UAC_AmbiTagTrigger Function CheckTags
 
 // Begin Class UAC_AmbiTagTrigger Function DebugEvent
 struct Z_Construct_UFunction_UAC_AmbiTagTrigger_DebugEvent_Statics
@@ -349,8 +346,7 @@ void UAC_AmbiTagTrigger::StaticRegisterNativesUAC_AmbiTagTrigger()
 		{ "AddComponentToTracker", &UAC_AmbiTagTrigger::execAddComponentToTracker },
 		{ "AmbiTagsUpdateDelegate", &UAC_AmbiTagTrigger::execAmbiTagsUpdateDelegate },
 		{ "CallActivated", &UAC_AmbiTagTrigger::execCallActivated },
-		{ "CheckActiveTags", &UAC_AmbiTagTrigger::execCheckActiveTags },
-		{ "CheckInactiveTags", &UAC_AmbiTagTrigger::execCheckInactiveTags },
+		{ "CheckTags", &UAC_AmbiTagTrigger::execCheckTags },
 		{ "DebugEvent", &UAC_AmbiTagTrigger::execDebugEvent },
 		{ "OverrideSpawnComponent", &UAC_AmbiTagTrigger::execOverrideSpawnComponent },
 		{ "SendDebugInfo", &UAC_AmbiTagTrigger::execSendDebugInfo },
@@ -372,7 +368,6 @@ struct Z_Construct_UClass_UAC_AmbiTagTrigger_Statics
 		{ "ModuleRelativePath", "Public/AC_AmbiTagTrigger.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ambiTagSubsystem_MetaData[] = {
-		{ "Category", "AC_AmbiTagTrigger" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//variables\\\\\n" },
 #endif
@@ -446,8 +441,7 @@ struct Z_Construct_UClass_UAC_AmbiTagTrigger_Statics
 		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_AddComponentToTracker, "AddComponentToTracker" }, // 3324041252
 		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_AmbiTagsUpdateDelegate, "AmbiTagsUpdateDelegate" }, // 3525517979
 		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_CallActivated, "CallActivated" }, // 1385545344
-		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckActiveTags, "CheckActiveTags" }, // 3362610893
-		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckInactiveTags, "CheckInactiveTags" }, // 3146352839
+		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_CheckTags, "CheckTags" }, // 2892997877
 		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_DebugEvent, "DebugEvent" }, // 1858185343
 		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_OverrideSpawnComponent, "OverrideSpawnComponent" }, // 2691048944
 		{ &Z_Construct_UFunction_UAC_AmbiTagTrigger_SendDebugInfo, "SendDebugInfo" }, // 3887950334
@@ -458,7 +452,7 @@ struct Z_Construct_UClass_UAC_AmbiTagTrigger_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAC_AmbiTagTrigger_Statics::NewProp_ambiTagSubsystem = { "ambiTagSubsystem", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAC_AmbiTagTrigger, ambiTagSubsystem), Z_Construct_UClass_UAmbiTagSubsystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ambiTagSubsystem_MetaData), NewProp_ambiTagSubsystem_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAC_AmbiTagTrigger_Statics::NewProp_ambiTagSubsystem = { "ambiTagSubsystem", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAC_AmbiTagTrigger, ambiTagSubsystem), Z_Construct_UClass_UAmbiTagSubsystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ambiTagSubsystem_MetaData), NewProp_ambiTagSubsystem_MetaData) };
 void Z_Construct_UClass_UAC_AmbiTagTrigger_Statics::NewProp_bEnable_SetBit(void* Obj)
 {
 	((UAC_AmbiTagTrigger*)Obj)->bEnable = 1;
@@ -536,14 +530,14 @@ UAC_AmbiTagTrigger::~UAC_AmbiTagTrigger() {}
 // End Class UAC_AmbiTagTrigger
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAC_AmbiTagTrigger, UAC_AmbiTagTrigger::StaticClass, TEXT("UAC_AmbiTagTrigger"), &Z_Registration_Info_UClass_UAC_AmbiTagTrigger, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAC_AmbiTagTrigger), 3810159665U) },
+		{ Z_Construct_UClass_UAC_AmbiTagTrigger, UAC_AmbiTagTrigger::StaticClass, TEXT("UAC_AmbiTagTrigger"), &Z_Registration_Info_UClass_UAC_AmbiTagTrigger, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAC_AmbiTagTrigger), 1625617247U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_841828696(TEXT("/Script/AmbienceTags"),
-	Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_415143377(TEXT("/Script/AmbienceTags"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AC_AmbiTagTrigger_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

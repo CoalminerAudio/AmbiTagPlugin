@@ -20,99 +20,73 @@ struct AMBIENCETAGS_API FAmbiTagCollectionDebugInfo
 };
 
 USTRUCT(BlueprintType)
-struct AMBIENCETAGS_API FAmbiTagWwiseEventsDraft
+struct AMBIENCETAGS_API FAmbiTagWwiseEvents
 {
 	GENERATED_BODY()
 
+	//event to play when conditions match correctly
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UAkAudioEvent* StartEvent = nullptr;
 
+	//ending event to trigger when the event is stopped
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bUseEndingEvent = true;
+
+	//event to trigger on an existing AkObject when the trigger conditions no longer match
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (EditCondition = bUseEndingEvent))
 	UAkAudioEvent* StopEvent = nullptr;
 
 };
 
 USTRUCT(BlueprintType)
-struct AMBIENCETAGS_API FAmbiTagSpawnInfoDraft
+struct AMBIENCETAGS_API FAmbiTagSpawnInfo
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance Values")
-	FVector2D HorizontalRange = { 100.f, 500.f };
+	//spawn the sounds away from the actors location 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Distance")
+	bool bSpawnAwayFromActor = true;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance Values")
-	FVector2D VerticalRange = { 100.f, 500.f };
+	//attach the spawned sound to the associated actor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Distance")
+	bool bLockAudioToSpawnSource = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Time Values")
-	FVector2D RespawnTime = { 15.f, 20.f };
+	//distance used for spawning from scene component
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Distance", meta = (EditCondition = bSpawnAwayFromActor, UIMin = 0.0))
+	FVector2D DistanceRange = { 100.f, 500.f };
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance Values")
+	//distance used for spawning from scene component
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Distance", meta = (EditCondition = bSpawnAwayFromActor))
+	FVector2D VerticalClamp = { -50.f, 50.f };
+
+	//use a linetrace to block the sound from spawning past a blocking actor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Distance", meta = (EditCondition = bSpawnAwayFromActor))
+	bool bUseLineTraceForSpawn = true;
+
+	//channel to watch for line trace detection from
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (EditCondition = bUseLineTRaceForSpawn))
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_Visibility;
+
+	//should the first event trigger have a time delay
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Time")
 	bool bDelayFirstEvent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance Values")
+	//time delay value for first event
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Time", meta = (EditCondition = bDelayFirstEvent))
+	FVector2D InitailSpawnDelayRange = { 15.f, 20.f };
+
+	//should events be retriggered after they end
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Time")
 	bool bRespawnAfterFirstEvent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance Values")
-	int MaxSpawnedElemetns = 2;
+	//Time range used for delaying retrigger playback
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Time", meta = (EditCondition = bRespawnAfterFirstEvent))
+	FVector2D RetriggerSpawnDelayRange = { 15.f, 20.f };
+
+	//max number of spawned elements allowed
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Amount")
+	int MaxSpawnedElemetns = 1;
 };
-UCLASS(Blueprintable, BlueprintType)
-class AMBIENCETAGS_API UAmbiTagEventDraft : public UPrimaryDataAsset
-{
-	GENERATED_BODY()
-public:
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FAmbiTagWwiseEventsDraft WwiseEvents;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FAmbiTagSpawnInfoDraft SpawnInfo;
-
-	UPROPERTY(BlueprintReadWrite)
-	FVector SpawnPoint = { 0, 0, 0 };
-
-	//Scene Component to use for location spawning
-	UPROPERTY(BlueprintReadWrite)
-	USceneComponent* SpawnSource;
-
-	UPROPERTY()
-	AActor* ParentActor;
-
-	UPROPERTY(BlueprintReadonly)
-	TArray<UAkComponent*> AkArray;
-
-	UFUNCTION(BlueprintCallable)
-	void SetUp(USceneComponent* LocationComp);
-
-	UFUNCTION(BlueprintCallable)
-	void EventStart();
-
-	UFUNCTION(BlueprintCallable)
-	void TimingDelay();
-
-	UFUNCTION(BlueprintCallable)
-	FVector SetEventLocation(FVector ComponentLocation);
-
-	UFUNCTION(BlueprintCallable)
-	void StopEvent();
-
-	FLatentActionInfo LatentInfo;
-	FTimerHandle TimeHandle;
-
-};
-
-UCLASS(Blueprintable, BlueprintType)
-class AMBIENCETAGS_API UAmbiTagCollectionDraft : public UPrimaryDataAsset
-{
-	GENERATED_BODY()
-public:
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FGameplayTagQuery CollectionTriggerCondition;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<UAmbiTagEventDraft*> AssociatedAmbiTags;
-};
-
 
 
 class AMBIENCETAGS_API AmbienceTagsData

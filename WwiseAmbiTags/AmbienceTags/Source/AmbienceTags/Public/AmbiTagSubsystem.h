@@ -6,6 +6,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "AmbienceTagsData.h"
 #include "GameplayTagContainer.h"
+#include "AmbiTagSettings.h"
 #include "AmbiTagSubsystem.generated.h"
 
 /**
@@ -28,11 +29,22 @@ protected:
 
 public:
 
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+
 	UPROPERTY(BlueprintReadWrite)
 	TMap<FName, FAmbiTagCollectionDebugInfo> AmbiTagDebugMap;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FGameplayTagContainer ActiveAmbiTags;
+
+	UPROPERTY(BlueprintReadonly)
+	int MaxEmitterCount = 16;
+
+	UPROPERTY(BlueprintReadonly)
+	int CurrentEmitterCount = 0;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bDebugEmitters = true;
 
 	UFUNCTION(BlueprintCallable)
 	void AddAmbiTags(FGameplayTagContainer InTags);

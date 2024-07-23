@@ -286,6 +286,18 @@ struct Z_Construct_UClass_UAmbiTagSubsystem_Statics
 		{ "Category", "AmbiTagSubsystem" },
 		{ "ModuleRelativePath", "Public/AmbiTagSubsystem.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxEmitterCount_MetaData[] = {
+		{ "Category", "AmbiTagSubsystem" },
+		{ "ModuleRelativePath", "Public/AmbiTagSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentEmitterCount_MetaData[] = {
+		{ "Category", "AmbiTagSubsystem" },
+		{ "ModuleRelativePath", "Public/AmbiTagSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bDebugEmitters_MetaData[] = {
+		{ "Category", "AmbiTagSubsystem" },
+		{ "ModuleRelativePath", "Public/AmbiTagSubsystem.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AmbiTagsUpdateDelegate_MetaData[] = {
 		{ "ModuleRelativePath", "Public/AmbiTagSubsystem.h" },
 	};
@@ -297,6 +309,10 @@ struct Z_Construct_UClass_UAmbiTagSubsystem_Statics
 	static const UECodeGen_Private::FNamePropertyParams NewProp_AmbiTagDebugMap_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp_AmbiTagDebugMap;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ActiveAmbiTags;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_MaxEmitterCount;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentEmitterCount;
+	static void NewProp_bDebugEmitters_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDebugEmitters;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_AmbiTagsUpdateDelegate;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_AmbiTagDebugDelegate;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -317,6 +333,13 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAmbiTagSubsys
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagDebugMap_Key_KeyProp = { "AmbiTagDebugMap_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagDebugMap = { "AmbiTagDebugMap", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagSubsystem, AmbiTagDebugMap), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AmbiTagDebugMap_MetaData), NewProp_AmbiTagDebugMap_MetaData) }; // 1357033588
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_ActiveAmbiTags = { "ActiveAmbiTags", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagSubsystem, ActiveAmbiTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActiveAmbiTags_MetaData), NewProp_ActiveAmbiTags_MetaData) }; // 3352185621
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_MaxEmitterCount = { "MaxEmitterCount", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagSubsystem, MaxEmitterCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxEmitterCount_MetaData), NewProp_MaxEmitterCount_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_CurrentEmitterCount = { "CurrentEmitterCount", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagSubsystem, CurrentEmitterCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentEmitterCount_MetaData), NewProp_CurrentEmitterCount_MetaData) };
+void Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_bDebugEmitters_SetBit(void* Obj)
+{
+	((UAmbiTagSubsystem*)Obj)->bDebugEmitters = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_bDebugEmitters = { "bDebugEmitters", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UAmbiTagSubsystem), &Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_bDebugEmitters_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDebugEmitters_MetaData), NewProp_bDebugEmitters_MetaData) };
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagsUpdateDelegate = { "AmbiTagsUpdateDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagSubsystem, AmbiTagsUpdateDelegate), Z_Construct_UDelegateFunction_AmbienceTags_AmbiTagsUpdatedDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AmbiTagsUpdateDelegate_MetaData), NewProp_AmbiTagsUpdateDelegate_MetaData) }; // 2014319345
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagDebugDelegate = { "AmbiTagDebugDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagSubsystem, AmbiTagDebugDelegate), Z_Construct_UDelegateFunction_AmbienceTags_AmbiTagsDebugDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AmbiTagDebugDelegate_MetaData), NewProp_AmbiTagDebugDelegate_MetaData) }; // 3748895996
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAmbiTagSubsystem_Statics::PropPointers[] = {
@@ -324,6 +347,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAmbiTagS
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagDebugMap_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagDebugMap,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_ActiveAmbiTags,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_MaxEmitterCount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_CurrentEmitterCount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_bDebugEmitters,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagsUpdateDelegate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagSubsystem_Statics::NewProp_AmbiTagDebugDelegate,
 };
@@ -366,14 +392,14 @@ UAmbiTagSubsystem::~UAmbiTagSubsystem() {}
 // End Class UAmbiTagSubsystem
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAmbiTagSubsystem, UAmbiTagSubsystem::StaticClass, TEXT("UAmbiTagSubsystem"), &Z_Registration_Info_UClass_UAmbiTagSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAmbiTagSubsystem), 3133369508U) },
+		{ Z_Construct_UClass_UAmbiTagSubsystem, UAmbiTagSubsystem::StaticClass, TEXT("UAmbiTagSubsystem"), &Z_Registration_Info_UClass_UAmbiTagSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAmbiTagSubsystem), 2674507097U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_2085292810(TEXT("/Script/AmbienceTags"),
-	Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_4177036255(TEXT("/Script/AmbienceTags"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

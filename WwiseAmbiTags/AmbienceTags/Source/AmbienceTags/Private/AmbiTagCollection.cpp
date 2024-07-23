@@ -9,11 +9,7 @@ void UAmbiTagCollection::TriggerAmbiTags(bool bTrigger)
 	{
 		if (bTrigger)
 		{
-			AmbiTag->SetUp(ParentActor, SpawnSource);
-			if (bDebugEvents)
-			{
-				AmbiTag->bDebug = true;
-			}
+			AmbiTag->SetUp(SpawnSource, this->GetFName());
 		}
 		else
 		{

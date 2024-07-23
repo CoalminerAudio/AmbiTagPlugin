@@ -9,36 +9,18 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
 class USceneComponent;
 #ifdef AMBIENCETAGS_AmbiTagEvent_generated_h
 #error "AmbiTagEvent.generated.h already included, missing '#pragma once' in AmbiTagEvent.h"
 #endif
 #define AMBIENCETAGS_AmbiTagEvent_generated_h
 
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_31_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FAmbiTagWwiseEvents_Statics; \
-	static class UScriptStruct* StaticStruct();
-
-
-template<> AMBIENCETAGS_API UScriptStruct* StaticStruct<struct FAmbiTagWwiseEvents>();
-
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_44_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FAmbiTagSpawnInfo_Statics; \
-	static class UScriptStruct* StaticStruct();
-
-
-template<> AMBIENCETAGS_API UScriptStruct* StaticStruct<struct FAmbiTagSpawnInfo>();
-
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execStopEvent); \
-	DECLARE_FUNCTION(execGetEventLocation); \
-	DECLARE_FUNCTION(execTimingDelay); \
-	DECLARE_FUNCTION(execEventStart); \
 	DECLARE_FUNCTION(execSetUp);
 
 
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAmbiTagEvent(); \
 	friend struct Z_Construct_UClass_UAmbiTagEvent_Statics; \
@@ -47,7 +29,7 @@ public: \
 	DECLARE_SERIALIZER(UAmbiTagEvent)
 
 
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAmbiTagEvent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -61,13 +43,13 @@ public: \
 	NO_API virtual ~UAmbiTagEvent();
 
 
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_79_PROLOG
-#define FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_GENERATED_BODY \
+#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_32_PROLOG
+#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_INCLASS_NO_PURE_DECLS \
-	FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_82_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h_35_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,7 +57,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> AMBIENCETAGS_API UClass* StaticClass<class UAmbiTagEvent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h
+#define CURRENT_FILE_ID FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagEvent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

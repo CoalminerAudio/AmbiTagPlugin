@@ -15,7 +15,6 @@ AMBIENCETAGS_API UClass* Z_Construct_UClass_UAmbiTagCollection();
 AMBIENCETAGS_API UClass* Z_Construct_UClass_UAmbiTagCollection_NoRegister();
 AMBIENCETAGS_API UClass* Z_Construct_UClass_UAmbiTagEvent_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
-ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTagQuery();
 UPackage* Z_Construct_UPackage__Script_AmbienceTags();
@@ -119,16 +118,8 @@ struct Z_Construct_UClass_UAmbiTagCollection_Statics
 		{ "ToolTip", "AmbiTag events to spawn" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ParentActor_MetaData[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//parent actor\n" },
-#endif
-		{ "ModuleRelativePath", "Public/AmbiTagCollection.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "parent actor" },
-#endif
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpawnSource_MetaData[] = {
+		{ "Category", "AmbiTagCollection" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//spawn comp\n" },
 #endif
@@ -138,18 +129,11 @@ struct Z_Construct_UClass_UAmbiTagCollection_Statics
 		{ "ToolTip", "spawn comp" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bDebugEvents_MetaData[] = {
-		{ "Category", "AmbiTagCollection" },
-		{ "ModuleRelativePath", "Public/AmbiTagCollection.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_CollectionTriggerCondition;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AssociatedAmbiTags_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_AssociatedAmbiTags;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ParentActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpawnSource;
-	static void NewProp_bDebugEvents_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDebugEvents;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -164,20 +148,12 @@ struct Z_Construct_UClass_UAmbiTagCollection_Statics
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_CollectionTriggerCondition = { "CollectionTriggerCondition", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagCollection, CollectionTriggerCondition), Z_Construct_UScriptStruct_FGameplayTagQuery, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollectionTriggerCondition_MetaData), NewProp_CollectionTriggerCondition_MetaData) }; // 572225232
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_AssociatedAmbiTags_Inner = { "AssociatedAmbiTags", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAmbiTagEvent_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_AssociatedAmbiTags = { "AssociatedAmbiTags", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagCollection, AssociatedAmbiTags), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AssociatedAmbiTags_MetaData), NewProp_AssociatedAmbiTags_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_ParentActor = { "ParentActor", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagCollection, ParentActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ParentActor_MetaData), NewProp_ParentActor_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_SpawnSource = { "SpawnSource", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagCollection, SpawnSource), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnSource_MetaData), NewProp_SpawnSource_MetaData) };
-void Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_bDebugEvents_SetBit(void* Obj)
-{
-	((UAmbiTagCollection*)Obj)->bDebugEvents = 1;
-}
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_bDebugEvents = { "bDebugEvents", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UAmbiTagCollection), &Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_bDebugEvents_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDebugEvents_MetaData), NewProp_bDebugEvents_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_SpawnSource = { "SpawnSource", nullptr, (EPropertyFlags)0x001000000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAmbiTagCollection, SpawnSource), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnSource_MetaData), NewProp_SpawnSource_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAmbiTagCollection_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_CollectionTriggerCondition,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_AssociatedAmbiTags_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_AssociatedAmbiTags,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_ParentActor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_SpawnSource,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAmbiTagCollection_Statics::NewProp_bDebugEvents,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAmbiTagCollection_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UAmbiTagCollection_Statics::DependentSingletons[])() = {
@@ -218,14 +194,14 @@ UAmbiTagCollection::~UAmbiTagCollection() {}
 // End Class UAmbiTagCollection
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAmbiTagCollection, UAmbiTagCollection::StaticClass, TEXT("UAmbiTagCollection"), &Z_Registration_Info_UClass_UAmbiTagCollection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAmbiTagCollection), 390558545U) },
+		{ Z_Construct_UClass_UAmbiTagCollection, UAmbiTagCollection::StaticClass, TEXT("UAmbiTagCollection"), &Z_Registration_Info_UClass_UAmbiTagCollection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAmbiTagCollection), 2028431389U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_2321333374(TEXT("/Script/AmbienceTags"),
-	Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AudioTestLevel_AudioTestProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_2455843377(TEXT("/Script/AmbienceTags"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbiTagCollection_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

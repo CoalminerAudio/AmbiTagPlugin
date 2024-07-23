@@ -27,7 +27,9 @@ public class AmbienceTags : ModuleRules
 			{
 				"Core",
 				"AkAudio",
-				"GameplayTags",
+                "WwiseSoundEngine",
+                "GameplayTags",
+				"DeveloperSettings",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

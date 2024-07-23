@@ -1,12 +1,21 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "AmbienceTags.h"
+#include "ISettingsModule.h"
 
 #define LOCTEXT_NAMESPACE "FAmbienceTagsModule"
 
 void FAmbienceTagsModule::StartupModule()
 {
-	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	/*
+	if (ISettingsModule* SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
+	{
+		SettingsModule->RegisterSettings("Project", "Plugins", "AmbiTag_Settings",
+			LOCTEXT("RuntimeSettingsName", "AmbitTags Settings"), 
+			LOCTEXT("RuntimeSettingsDescription", "Ambitag settings"),
+			GetMutableDefault<UAmbiTag
+	}
+	*/
 }
 
 void FAmbienceTagsModule::ShutdownModule()

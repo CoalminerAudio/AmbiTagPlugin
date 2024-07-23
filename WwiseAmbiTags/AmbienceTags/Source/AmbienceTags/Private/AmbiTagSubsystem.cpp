@@ -3,15 +3,33 @@
 
 #include "AmbiTagSubsystem.h"
 
+//TODO: Add debug and max voice count settings to project settings?
 
 void UAmbiTagSubsystem::AmbiTagsUpdated()
 {
 	AmbiTagsUpdateDelegate.Broadcast();
 }
 
+void UAmbiTagSubsystem::Initialize(FSubsystemCollectionBase& Collection)
+{
+	if (const UAmbiTagSettings* AmbiTagSetting = GetDefault<UAmbiTagSettings>())
+	{
+		UE_LOG(LogTemp, Display, TEXT("Loading AmbiTag subsystem"));
+		bDebugEmitters = AmbiTagSetting->bDebugAmbiTags;
+		MaxEmitterCount = AmbiTagSetting->MaxNumberOfEmitters;
+	}
+
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Failed to load in AmbiTag subsystem"));
+	}
+}
+
+
+
+
 void UAmbiTagSubsystem::AddAmbiTags(FGameplayTagContainer InTags)
 {
-	UE_LOG(LogTemp, Error, TEXT("The log has been hit"));
 	ActiveAmbiTags.AppendTags(InTags);
 	AmbiTagsUpdated();
 }

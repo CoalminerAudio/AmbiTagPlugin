@@ -26,7 +26,7 @@ protected:
 
 	//variables\\
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY()
 	UAmbiTagSubsystem* ambiTagSubsystem;
 
 	FAmbiTagCollectionDebugInfo AmbiTagDebugList;
@@ -67,10 +67,7 @@ protected:
 	void AmbiTagsUpdateDelegate();
 
 	UFUNCTION(BlueprintCallable)
-	void CheckActiveTags();
-
-	UFUNCTION(BlueprintCallable)
-	void CheckInactiveTags();
+	void CheckTags(bool ActiveTags, TArray<UAmbiTagCollection*> CollectionList);
 
 	UFUNCTION(BlueprintCallable)
 	void SendDebugInfo(bool Remove);
