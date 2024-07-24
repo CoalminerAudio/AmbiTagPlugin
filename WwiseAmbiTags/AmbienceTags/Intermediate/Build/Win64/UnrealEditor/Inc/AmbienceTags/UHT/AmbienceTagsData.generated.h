@@ -14,21 +14,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define AMBIENCETAGS_AmbienceTagsData_generated_h
 
-#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_15_GENERATED_BODY \
+#define FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_15_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAmbiTagCollectionDebugInfo_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> AMBIENCETAGS_API UScriptStruct* StaticStruct<struct FAmbiTagCollectionDebugInfo>();
 
-#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_25_GENERATED_BODY \
+#define FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_33_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAmbiTagWwiseEvents_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> AMBIENCETAGS_API UScriptStruct* StaticStruct<struct FAmbiTagWwiseEvents>();
 
-#define FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_44_GENERATED_BODY \
+#define FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_52_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAmbiTagSpawnInfo_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -36,7 +36,11 @@ template<> AMBIENCETAGS_API UScriptStruct* StaticStruct<struct FAmbiTagWwiseEven
 template<> AMBIENCETAGS_API UScriptStruct* StaticStruct<struct FAmbiTagSpawnInfo>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h
+#define CURRENT_FILE_ID FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h
 
 
+#define FOREACH_ENUM_EAMBITAGZONETYPE(op) \
+	op(Box) \
+	op(Sphere) \
+	op(Capsule) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

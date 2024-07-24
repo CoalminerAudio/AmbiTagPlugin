@@ -65,6 +65,7 @@
 "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Intermediate\Build\Win64\x64\UnrealEditor\Development\AkAudio\UnrealEditor-AkAudio.lib"
 "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Intermediate\Build\Win64\x64\UnrealEditor\Development\WwiseSoundEngine\UnrealEditor-WwiseSoundEngine.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayTags\UnrealEditor-GameplayTags.lib"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\DeveloperSettings\UnrealEditor-DeveloperSettings.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

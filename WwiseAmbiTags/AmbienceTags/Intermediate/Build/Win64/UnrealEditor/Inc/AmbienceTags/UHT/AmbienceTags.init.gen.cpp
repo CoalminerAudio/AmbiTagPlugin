@@ -25,13 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeAmbienceTags_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xF40B5E95,
-				0xB94DD9EF,
+				0xACCECC52,
+				0x902C8E7F,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_AmbienceTags.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_AmbienceTags.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AmbienceTags(Z_Construct_UPackage__Script_AmbienceTags, TEXT("/Script/AmbienceTags"), Z_Registration_Info_UPackage__Script_AmbienceTags, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF40B5E95, 0xB94DD9EF));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AmbienceTags(Z_Construct_UPackage__Script_AmbienceTags, TEXT("/Script/AmbienceTags"), Z_Registration_Info_UPackage__Script_AmbienceTags, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xACCECC52, 0x902C8E7F));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeAmbienceTagsData() {}
 
 // Begin Cross Module References
 AKAUDIO_API UClass* Z_Construct_UClass_UAkAudioEvent_NoRegister();
+AMBIENCETAGS_API UEnum* Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType();
 AMBIENCETAGS_API UScriptStruct* Z_Construct_UScriptStruct_FAmbiTagCollectionDebugInfo();
 AMBIENCETAGS_API UScriptStruct* Z_Construct_UScriptStruct_FAmbiTagSpawnInfo();
 AMBIENCETAGS_API UScriptStruct* Z_Construct_UScriptStruct_FAmbiTagWwiseEvents();
@@ -83,6 +84,63 @@ UScriptStruct* Z_Construct_UScriptStruct_FAmbiTagCollectionDebugInfo()
 	return Z_Registration_Info_UScriptStruct_AmbiTagCollectionDebugInfo.InnerSingleton;
 }
 // End ScriptStruct FAmbiTagCollectionDebugInfo
+
+// Begin Enum EAmbiTagZoneType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EAmbiTagZoneType;
+static UEnum* EAmbiTagZoneType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EAmbiTagZoneType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EAmbiTagZoneType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType, (UObject*)Z_Construct_UPackage__Script_AmbienceTags(), TEXT("EAmbiTagZoneType"));
+	}
+	return Z_Registration_Info_UEnum_EAmbiTagZoneType.OuterSingleton;
+}
+template<> AMBIENCETAGS_API UEnum* StaticEnum<EAmbiTagZoneType>()
+{
+	return EAmbiTagZoneType_StaticEnum();
+}
+struct Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Box.DisplayName", "Box Zone" },
+		{ "Box.Name", "Box" },
+		{ "Capsule.DisplayName", "Capsule Zone" },
+		{ "Capsule.Name", "Capsule" },
+		{ "ModuleRelativePath", "Public/AmbienceTagsData.h" },
+		{ "Sphere.DisplayName", "Sphere Zone" },
+		{ "Sphere.Name", "Sphere" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "Box", (int64)Box },
+		{ "Sphere", (int64)Sphere },
+		{ "Capsule", (int64)Capsule },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_AmbienceTags,
+	nullptr,
+	"EAmbiTagZoneType",
+	"EAmbiTagZoneType",
+	Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::Regular,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType()
+{
+	if (!Z_Registration_Info_UEnum_EAmbiTagZoneType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EAmbiTagZoneType.InnerSingleton, Z_Construct_UEnum_AmbienceTags_EAmbiTagZoneType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EAmbiTagZoneType.InnerSingleton;
+}
+// End Enum EAmbiTagZoneType
 
 // Begin ScriptStruct FAmbiTagWwiseEvents
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AmbiTagWwiseEvents;
@@ -415,17 +473,20 @@ UScriptStruct* Z_Construct_UScriptStruct_FAmbiTagSpawnInfo()
 // End ScriptStruct FAmbiTagSpawnInfo
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ EAmbiTagZoneType_StaticEnum, TEXT("EAmbiTagZoneType"), &Z_Registration_Info_UEnum_EAmbiTagZoneType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 38019997U) },
+	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FAmbiTagCollectionDebugInfo::StaticStruct, Z_Construct_UScriptStruct_FAmbiTagCollectionDebugInfo_Statics::NewStructOps, TEXT("AmbiTagCollectionDebugInfo"), &Z_Registration_Info_UScriptStruct_AmbiTagCollectionDebugInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmbiTagCollectionDebugInfo), 1357033588U) },
 		{ FAmbiTagWwiseEvents::StaticStruct, Z_Construct_UScriptStruct_FAmbiTagWwiseEvents_Statics::NewStructOps, TEXT("AmbiTagWwiseEvents"), &Z_Registration_Info_UScriptStruct_AmbiTagWwiseEvents, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmbiTagWwiseEvents), 429037265U) },
 		{ FAmbiTagSpawnInfo::StaticStruct, Z_Construct_UScriptStruct_FAmbiTagSpawnInfo_Statics::NewStructOps, TEXT("AmbiTagSpawnInfo"), &Z_Registration_Info_UScriptStruct_AmbiTagSpawnInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmbiTagSpawnInfo), 1023506501U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_1660977568(TEXT("/Script/AmbienceTags"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_564347478(TEXT("/Script/AmbienceTags"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics::ScriptStructInfo),
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_AmbiTagShowcase_AmbiTagShowcaseBuildout_AmbiTagProject_Plugins_AmbienceTags_Source_AmbienceTags_Public_AmbienceTagsData_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

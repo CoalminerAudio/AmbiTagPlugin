@@ -19,6 +19,14 @@ struct AMBIENCETAGS_API FAmbiTagCollectionDebugInfo
 
 };
 
+UENUM(BlueprintType)
+enum EAmbiTagZoneType
+{
+	Box UMETA(DisplayName = "Box Zone"),
+	Sphere UMETA(DisplayName = "Sphere Zone"),
+	Capsule UMETA(DisplayName = "Capsule Zone"),
+};
+
 USTRUCT(BlueprintType)
 struct AMBIENCETAGS_API FAmbiTagWwiseEvents
 {

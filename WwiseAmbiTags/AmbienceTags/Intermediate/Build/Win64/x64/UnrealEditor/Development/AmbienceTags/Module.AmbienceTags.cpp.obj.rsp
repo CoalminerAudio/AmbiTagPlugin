@@ -1,11 +1,11 @@
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp"
-/FI"F:\UnrealProjects\AmbiTagShowcase\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Definitions.AmbienceTags.h"
-/Yu"F:\UnrealProjects\AmbiTagShowcase\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"F:\UnrealProjects\AmbiTagShowcase\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp.obj"
-/sourceDependencies "F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp.dep.json"
-@"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\AmbienceTags.Shared.rsp"
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp"
+/FI"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Definitions.AmbienceTags.h"
+/Yu"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp.obj"
+/sourceDependencies "F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp.dep.json"
+@"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\AmbienceTags.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

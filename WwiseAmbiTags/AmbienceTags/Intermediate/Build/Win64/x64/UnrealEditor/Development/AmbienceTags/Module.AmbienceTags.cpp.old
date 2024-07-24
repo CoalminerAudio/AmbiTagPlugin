@@ -5,4 +5,5 @@
 #include "F:/UnrealProjects/AmbiTagShowcase/Plugins/AmbienceTags/Intermediate/Build/Win64/UnrealEditor/Inc/AmbienceTags/UHT/AmbiTagCollection.gen.cpp"
 #include "F:/UnrealProjects/AmbiTagShowcase/Plugins/AmbienceTags/Intermediate/Build/Win64/UnrealEditor/Inc/AmbienceTags/UHT/AmbiTagEmitter.gen.cpp"
 #include "F:/UnrealProjects/AmbiTagShowcase/Plugins/AmbienceTags/Intermediate/Build/Win64/UnrealEditor/Inc/AmbienceTags/UHT/AmbiTagEvent.gen.cpp"
+#include "F:/UnrealProjects/AmbiTagShowcase/Plugins/AmbienceTags/Intermediate/Build/Win64/UnrealEditor/Inc/AmbienceTags/UHT/AmbiTagSettings.gen.cpp"
 #include "F:/UnrealProjects/AmbiTagShowcase/Plugins/AmbienceTags/Intermediate/Build/Win64/UnrealEditor/Inc/AmbienceTags/UHT/AmbiTagSubsystem.gen.cpp"

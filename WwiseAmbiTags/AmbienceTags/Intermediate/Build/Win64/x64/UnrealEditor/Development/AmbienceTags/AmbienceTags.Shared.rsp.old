@@ -306,9 +306,6 @@
 /I "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Source\WwiseProcessing\Public"
 /I "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Intermediate\Build\Win64\UnrealEditor\Inc\WwiseProjectDatabase\UHT"
 /I "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Source\WwiseProjectDatabase\Public"
-/I "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Intermediate\Build\Win64\UnrealEditor\Inc\Wwise\UHT"
-/I "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Source\WwiseAudioLinkRuntime\Public"
-/I "F:\UnrealProjects\AmbiTagShowcase\Plugins\Wwise\Source\Wwise\Public"
 /external:W0
 /external:I "ThirdParty\LibTiff\Source\Win64"
 /external:I "ThirdParty\LibTiff\Source"

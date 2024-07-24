@@ -6,12 +6,7 @@
 /NAME:"UnrealEditor-AmbienceTagsEditor.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"F:\UnrealProjects\AmbiTagShowcase\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\Module.AmbienceTagsEditor.cpp.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\Actions_AmbiTagCollection.cpp.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\Actions_AmbiTagEvent.cpp.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\AmbienceTagsEditor.cpp.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\AmbiTagCollectionFactory.cpp.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\AmbiTagEventFactory.cpp.obj"
-"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\Default.rc2.res"
-/OUT:"F:\UnrealProjects\AmbiTagShowcase\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\UnrealEditor-AmbienceTagsEditor.lib"
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\Module.AmbienceTagsEditor.cpp.obj"
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\Default.rc2.res"
+/OUT:"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTagsEditor\UnrealEditor-AmbienceTagsEditor.lib"
