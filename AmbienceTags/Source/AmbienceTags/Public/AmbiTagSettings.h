@@ -24,7 +24,7 @@ public:
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "General")
 	bool bDebugAmbiTags = false;
 
-	//Length of time debug info will 
+	//Length of time debug info will populate the screen for
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "General")
 	float DebugLength = 5.f;
 };
