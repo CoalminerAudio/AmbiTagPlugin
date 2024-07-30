@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\source\\ambiencetagseditor\\private\\ambiencetagseditor.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unrealprojects\\ambitagshowcase\\intermediate\\build\\win64\\x64\\ambitagshowcaseeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ambiencetagseditor\\definitions.ambiencetagseditor.h",
+            "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\source\\ambiencetagseditor\\public\\ambiencetagseditor.h",
+            "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\source\\ambiencetagseditor\\public\\actions_ambitagcollection.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\assettools\\public\\assettypeactions_base.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\assettools\\public\\iassettools.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\assettools\\public\\assettypecategories.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\assettools\\public\\iassettypeactions.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\merge\\public\\merge.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\editor\\unrealed\\classes\\thumbnailrendering\\thumbnailmanager.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\editor\\unrealed\\classes\\thumbnailrendering\\thumbnailrenderer.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\thumbnailrenderer.generated.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\thumbnailmanager.generated.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\editor\\unrealed\\public\\automatedassetimportdata.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\automatedassetimportdata.generated.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assettools\\uht\\iassettools.generated.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\assettools\\public\\assettoolsmodule.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\editor\\unrealed\\public\\toolkits\\simpleasseteditor.h",
+            "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\source\\ambiencetagseditor\\public\\actions_ambitagevent.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

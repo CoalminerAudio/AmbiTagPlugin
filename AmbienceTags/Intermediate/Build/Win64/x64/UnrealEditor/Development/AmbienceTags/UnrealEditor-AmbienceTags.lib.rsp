@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AmbienceTags.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Intermediate\Build\Win64\x64\AmbiTagShowcaseEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Module.AmbienceTags.cpp.obj"
+"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\Default.rc2.res"
+/OUT:"F:\UnrealProjects\AmbiTagShowcase\AmbiTagShowcaseBuildout\AmbiTagProject\Plugins\AmbienceTags\Intermediate\Build\Win64\x64\UnrealEditor\Development\AmbienceTags\UnrealEditor-AmbienceTags.lib"

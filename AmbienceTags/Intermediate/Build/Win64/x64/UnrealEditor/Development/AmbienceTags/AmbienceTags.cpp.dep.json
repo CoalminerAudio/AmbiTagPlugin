@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\source\\ambiencetags\\private\\ambiencetags.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unrealprojects\\ambitagshowcase\\intermediate\\build\\win64\\x64\\ambitagshowcaseeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ambiencetags\\definitions.ambiencetags.h",
+            "f:\\unrealprojects\\ambitagshowcase\\plugins\\ambiencetags\\source\\ambiencetags\\public\\ambiencetags.h",
+            "f:\\epiclibrary\\ue_5.4\\engine\\source\\developer\\settings\\public\\isettingsmodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
