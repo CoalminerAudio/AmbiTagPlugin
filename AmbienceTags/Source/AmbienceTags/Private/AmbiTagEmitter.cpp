@@ -12,7 +12,7 @@ AAmbiTagEmitter::AAmbiTagEmitter()
 	AudComp = CreateDefaultSubobject<UFMODAudioComponent>(TEXT("Audio Component"));
 	AudComp->bAutoActivate = false;
 	
-	
+	this->SetRootComponent(AudComp);
 }
 
 void AAmbiTagEmitter::StartAmbiSource(USceneComponent* componentValue, FAmbiTagAudioEvent eventValues, FAmbiTagSpawnInfo spawnValues, FName AmbitagCollectionName, FName AmbiTagEventName)
