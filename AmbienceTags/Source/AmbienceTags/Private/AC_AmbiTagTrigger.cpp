@@ -58,15 +58,14 @@ void UAC_AmbiTagTrigger::BeginPlay()
 		}
 		else
 		{
-			//UE_LOG(LogTemp, Error, TEXT("Deleting AmbiTagTrigger component of actor: %s"), DebugName);
-		}
-
-		
+			UE_LOG(LogTemp, Error, TEXT("AmbiTag Subsysem not valid"));
+		}		
 	}
 
 	//if the component is disabled, or if the list is empty, delete this component
 	else
 	{
+		UE_LOG(LogTemp, Error, TEXT("Removing from AmbiTag trigger %s due to being disabled or an empty AmbiTag Collection List"), *DebugName.ToString());
 		this->DestroyComponent();
 	}
 
