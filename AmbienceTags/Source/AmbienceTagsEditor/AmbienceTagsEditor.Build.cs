@@ -26,7 +26,6 @@ public class AmbienceTagsEditor : ModuleRules
 			new string[]
 			{
 				"Core",
-				"AkAudio",
 				"GameplayTags",
 				// ... add other public dependencies that you statically link with here ...
 			}
